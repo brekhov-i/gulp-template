@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ru">
+    @@include("@html/modules/head.html", {
+        title: "Заголовок",
+        desc: "Описание"
+    })
+<body>
+
+    @@if(isBuild) {
+        <script src="@js/main.min.js"></script>
+    }
+    @@if(!isBuild) {
+        <script src="@js/main.js"></script>
+    }
+</body>
+</html>
